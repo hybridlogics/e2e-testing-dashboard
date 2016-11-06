@@ -1,10 +1,13 @@
 
 
+E2E Testing Dashboard!
+=====================
 
-[TOC]
+Dashboard to live check the status of underdeveloping apps and thier tests staus.
+
 
 Dashboard App Docs!
-===================
+==============================
 
 
 Before deploying this application it is supposed that you have installed  **NodeJS** in your machine.. If not then you can install nodejs by following these [instruction] [1]
@@ -20,8 +23,13 @@ Install loopback
 
 
 
-Install PM2
--------------
+Install node_modules
+------------------------------------
+>  $ npm install 
+
+
+Install PM2 for Production Environment (Optional)
+------------------------------------
 
 [**PM2**][3] is Advanced, production process manager for Node.js
 
@@ -31,12 +39,18 @@ Install PM2
 
 
 Deploy the application
--------------
+----------------------
 
 Run the following command to projects root directory.
 
 
 > $ pm2 start server/server.js
+
+OR
+
+> $ node .
+
+
 
 
 
