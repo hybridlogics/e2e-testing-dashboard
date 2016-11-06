@@ -54,11 +54,11 @@ OR
 Screenshots
 -----------
 
-![Dadhboard Screenshot](/../E2E-Testing-Dashboard/screenshots/dashboard.png?raw=ture "Dashboard")
+![Dadhboard Screenshot](https://raw.githubusercontent.com/hybridlogics/E2E-Testing-Dashboard/master/screenshots/dashboard.png)
 
-![Reports](/../E2E-Testing-Dashboard/screenshots/report.png?raw=true "Dashboard")
+![Reports](https://github.com/hybridlogics/E2E-Testing-Dashboard/blob/master/screenshots/report.png?raw=true)
 
-![Test Summary](/../E2E-Testing-Dashboard/screenshots/testsummary.png?raw=true "Dashboard")
+![Test Summary](https://github.com/hybridlogics/E2E-Testing-Dashboard/blob/master/screenshots/testsummary.png?raw=true)
 
 
 
