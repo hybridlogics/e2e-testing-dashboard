@@ -51,6 +51,14 @@ OR
 > $ node .
 
 
+Screenshots
+-----------
+
+![Dadhboard Screenshot](E2E-Testing-Dashboard/screenshots/dashboard.png "Dashboard")
+
+![Reports](E2E-Testing-Dashboard/screenshots/report.png "Dashboard")
+
+![Test Summary](E2E-Testing-Dashboard/screenshots/testsummary.png "Dashboard")
 
 
 
