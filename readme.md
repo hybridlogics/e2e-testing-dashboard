@@ -54,11 +54,11 @@ OR
 Screenshots
 -----------
 
-![Dadhboard Screenshot](E2E-Testing-Dashboard/screenshots/dashboard.png "Dashboard")
+![Dadhboard Screenshot](/../E2E-Testing-Dashboard/screenshots/dashboard.png?raw=ture "Dashboard")
 
-![Reports](E2E-Testing-Dashboard/screenshots/report.png "Dashboard")
+![Reports](/../E2E-Testing-Dashboard/screenshots/report.png?raw=true "Dashboard")
 
-![Test Summary](E2E-Testing-Dashboard/screenshots/testsummary.png "Dashboard")
+![Test Summary](/../E2E-Testing-Dashboard/screenshots/testsummary.png?raw=true "Dashboard")
 
 
 
