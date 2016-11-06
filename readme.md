@@ -3,11 +3,11 @@
 E2E Testing Dashboard!
 =====================
 
-Dashboard to live check the status of underdeveloping apps and thier tests staus.
+"End 2 End Testing Dashboard" is an application for creating Application Tests and reviewing them at the same time
 
 
 Dashboard App Docs!
-==============================
+-----------------
 
 
 Before deploying this application it is supposed that you have installed  **NodeJS** in your machine.. If not then you can install nodejs by following these [instruction] [1]
