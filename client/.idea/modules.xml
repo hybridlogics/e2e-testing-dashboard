@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Dashboard/Dashboard.iml" filepath="$PROJECT_DIR$/../Dashboard/Dashboard.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Dashboard_Daya/Dashboard_Daya.iml" filepath="$USER_HOME$/Downloads/Dashboard_Daya/Dashboard_Daya.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Myproj/Myproj.iml" filepath="$USER_HOME$/Downloads/Myproj/Myproj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/client.iml" filepath="$PROJECT_DIR$/.idea/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/to_merge.iml" filepath="$PROJECT_DIR$/to_merge.iml" />
+    </modules>
+  </component>
+</project>

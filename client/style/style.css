@@ -1,0 +1,109 @@
+
+.caption {
+  height: 130px;
+  overflow: hidden;
+}
+
+.caption h2 a {
+  text-decoration: none;
+}
+
+.caption p {
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.response {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.response p a {
+  text-decoration: none;
+  color: #d17581;
+  cursor: pointer;
+}
+
+.thumbnail {
+  padding: 0;
+  border: none;
+  background-color: #F0F0F0;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+  color: #333;
+}
+
+.right {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+#content {
+  position: relative;
+  z-index: 1;
+}
+
+.water_mark_error {
+  position: absolute;
+  z-index: 0;
+  background: transparent;
+  display: block;
+  min-height: 50%;
+  min-width: 50%;
+  opacity: 0.5;
+
+}
+
+#error_text {
+  color: red;
+  font-size: 1.8em;
+  margin-top: 200px;
+  margin-left: 70px;
+  transform: rotate(330deg);
+  -webkit-transform: rotate(330deg);
+}
+
+td > a {
+  color: black;
+}
+
+@media (max-width: 1001px) {
+  .jobCol {
+    height: 50px;
+  }
+}
+
+@media (max-width: 919px) {
+  .urlCol {
+    height: 50px;
+  }
+}
+
+.goto-Link{
+  width:150px;
+  color:#2887A6;
+  background-color: #e7e6e5;
+  margin:15px;
+  margin-bottom: 0px;
+  float:right;
+}
+
+.url-list{
+  width:150px;
+  min-width:150px;
+}
+
+.dashboardTable{
+  border-collapse: separate;
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "err_name": 404,
+    "status": "Resource does not exist"
+  },
+  {
+    "err_name": 503,
+    "status": "The service is currently unavailable"
+  },
+  {
+    "err_name": 500,
+    "status": "An internal error"
+  },
+  {
+    "err_name": 401,
+    "status": "Anonymous clients are not authorized to view the content"
+  }
+]

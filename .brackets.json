@@ -1,0 +1,20 @@
+{
+    "jscodehints.detectedExclusions": [
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/modules/set/test/set.test.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/modules/change-stream/test/change-stream.test.js",
+        "E:/HL/projects/dasboard_test_progress_integration/common/models/pcms.js",
+        "E:/HL/projects/dasboard_test_progress_integration/common/models/ios.js",
+        "E:/HL/projects/dasboard_test_progress_integration/common/models/crm.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/scripts/lb-services.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/scripts/app.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/test/fixtures/event-source.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/modules/set/set.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/modules/change-stream/stream.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/scripts/angular.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/scripts/angular-route.min.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/scripts/angular-local-storage.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/angular-live-set/modules/change-stream/change-stream.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/nvd3/meteor/export.js",
+        "E:/HL/projects/dasboard_test_progress_integration/client/bower_components/nvd3/build/nv.d3.min.js"
+    ]
+}

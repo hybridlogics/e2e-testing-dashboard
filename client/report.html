@@ -1,0 +1,96 @@
+<!--goto button on top-->
+<div class="btn goto-Link" uib-dropdown dropdown-append-to-body>
+    <div uib-dropdown-toggle>
+        Goto <span class="caret"></span>
+    </div>
+
+    <ul class="dropdown-menu url-list" uib-dropdown-menu>
+        <li role="menuitem"><a href="/#/mainDashboard">Main Dashboard</a></li>
+        <!--<li role="menuitem"><a href="/#/report">Report</a></li>-->
+    </ul>
+</div>
+
+<!--page title...-->
+<div class="jumbotron" style="height:130px">
+    <div class="container">
+        <h1 style="height:45px; padding: 2px; margin-left:10px; margin-right:45px;">
+      <small>Report Options</small>
+  </h1>
+    </div>
+</div>
+
+
+<div class="container report-container">
+
+    <div class="well well-sm error" ng-if="error">Please enter a valid date!</div>
+
+    <form name="reportForm" ng-submit="reportDataSubmit(app)" class="well">
+
+        <div class="form-fields">
+            <strong class="col-md-3">Application: </strong>
+            <select required class="col-width" ng-model="app.appname" ng-options="app as app.name for app in appNames track by app.id">
+            </select>
+        </div>
+        <div class="form-fields row">
+            <strong class="col-md-3">Start Date:</strong>
+
+            <div class="">
+                <input type="text" placeholder="dd/mm/yyyy" ng-class="{error:_error}" ng-model="app.start_date" class="col-width col-md-4" uib-datepicker-popup="{{format}}" is-open="startDatePopup.opened" ng-click="startDatePicker()" />
+            </div>
+        </div>
+
+        <div class="form-fields row">
+            <strong class="col-md-3">End Date:</strong>
+            <div class="">
+                <input type="text" placeholder="dd/mm/yyyy" ng-class="{error:_error}" ng-model="app.end_date" class="col-width col-md-4" uib-datepicker-popup="{{format}}" is-open="endDatePopup.opened" ng-click="endDatePicker()" />
+            </div>
+        </div>
+
+        <div class="form-fields">
+            <span class="col-md-5"></span>
+            <button class="btn btn-md generate-btn" type="submit" ng-disabled="!app.appname">Generate</button>
+        </div>
+    </form>
+
+    <div class="loading" ng-if="loading"><i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i><span class="sr-only">Loading...</span></div>
+    <div ng-if="dataError" class="loading">Data not Found</div>
+    <div class="report-table" ng-if="displayReport">
+        <section class="col-md-12">
+
+            <caption>
+                <h3> Report Summary - {{urlPages |uppercase}} </h3></caption>
+            <div id="report-table">
+                <table class="table table-bordered table-striped">
+                    <thead class="report-header">
+                        <tr>
+                            <th class="col-md-1">Build No.</th>
+                            <th class="col-md-1">Build Date</th>
+                            <th class="col-md-1">Test Status</th>
+                            <th class="col-md-1">Total Test</th>
+                            <th class="col-md-1">Passed Test</th>
+                            <th class="col-md-1">Failed Test</th>
+                            <th class="col-md-1">Skipp Test</th>
+                            <th class="col-md-1">Version number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in reportData">
+                            <td class="col-md-1"><span ng-if="!data.buildNumber">N/A</span><span ng-if="data.buildNumber">{{data.id}}</span></td>
+                            <td class="col-md-1">{{data.timestamp | date:'dd-MM-yyyy:hh:mm:ss'}}</td>
+                            <td class="col-md-1">{{data.result|uppercase}}</td>
+                            <td class="col-md-1"><span ng-if="data.totalCount>0"><a href="#/report/total-Test/{{urlPages}}/{{data.id}}">{{data.totalCount}}</a></span><span ng-if="data.totalCount<1">{{data.totalCount}}</span></td>
+                            <td class="col-md-1"><span ng-if="data.totalCount-data.failCount>0"><a href="#/report/total-Passed/{{urlPages}}/{{data.id}}">{{data.passCount}}</a></span><span ng-if="data.totalCount-data.failCount<1">{{data.passCount}}</span></td>
+                            <td class="col-md-1"><span ng-if="data.failCount>0"><a href="#/report/total-Failed/{{urlPages}}/{{data.id}}">{{data.failCount}}</a></span><span ng-if="data.failCount<1">{{data.failCount}}</span></td>
+                            <td class="col-md-1"><span ng-if="data.failCount>0"><a href="#/report/total-Skipped/{{urlPages}}/{{data.id}}">{{data.skipCount}}</a></span><span ng-if="data.failCount<1">{{data.skipCount}}</span></td>
+                            <td class="col-md-1"><a href="#/versions/{{urlPages}}/{{data.id}}">Click here</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="col-md-12">
+            <nvd3 options="options" data="data"></nvd3>
+        </section>
+    </div>
+    </section>
+</div>

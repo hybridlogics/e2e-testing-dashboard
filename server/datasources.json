@@ -1,0 +1,26 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mlabds": {
+    "host": "ds063186.mlab.com",
+    "port": 63186,
+    "url": "mongodb://rizwan:root@ds063186.mlab.com:63186/e2e",
+    "database": "mocktest",
+    "password": "root",
+    "name": "mlabds",
+    "user": "rizwan",
+    "connector": "mongodb"
+  }, 
+    "mlabdsdummy": {
+    "host": "ds041536.mlab.com",
+    "port": 41536,
+    "url": "mongodb://rizwan:root@ds041536.mlab.com:41536/mocktest",
+    "database": "mocktest",
+    "password": "root",
+    "name": "mlabds",
+    "user": "rizwan",
+    "connector": "mongodb"
+  }
+}

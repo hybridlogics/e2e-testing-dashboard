@@ -1,0 +1,28 @@
+{
+"node": true,
+"camelcase" : true,
+"eqnull" : true,
+"indent": 2,
+"undef": true,
+"quotmark": "single",
+"newcap": true,
+"nonew": true,
+"sub": true,
+"laxcomma": true,
+"laxbreak": true,
+"globals": {
+  "angular": true,
+  "after": true,
+  "afterEach": true,
+  "assert": true,
+  "before": true,
+  "beforeEach": true,
+  "describe": true,
+  "expect": true,
+  "it": true,
+  "inject": true,
+  "module": true,
+  "stream": true,
+  "EventSource": true
+ }
+}

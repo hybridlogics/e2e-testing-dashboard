@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "android": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "ios": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "roku": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "web": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "pcms": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "crm": {
+    "dataSource": "mlabds",
+    "public": true
+  },
+  "apps": {
+    "dataSource": "db",
+    "public": true
+  }
+}

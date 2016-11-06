@@ -1,0 +1,16 @@
+
+{
+ "db": {
+  "name": "db",
+  "connector": "memory"
+ },
+ "mlabds": {
+  "host": "localhost",
+  "port": 9010,
+  "database": "reporting",
+  "password": "secret",
+  "name": "mlabds",
+  "user": "someadmin",
+  "connector": "mongodb"
+ }
+}

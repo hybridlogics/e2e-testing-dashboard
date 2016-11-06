@@ -1,0 +1,52 @@
+.title-Page {
+    height: 45px;
+    padding: 2px;
+}
+
+.col-width {
+    width: 70%;
+    margin-left: 10px;
+    height: 30px;
+}
+
+.report-table {
+    margin-top: 60px;
+}
+
+.form-fields {
+    margin: 10px;
+}
+
+.report-header {
+    background: green;
+    color: white;
+}
+
+.generate-btn {
+    color: #2887A6;
+    margin-left: 20px;
+}
+
+.generate-btn:hover {
+    color: black;
+}
+
+.well {
+    width: 45%;
+    margin-left: 10px;
+}
+
+.error {
+    background-color: red;
+    font-size: 20px;
+}
+
+.loading {
+    text-align: center;
+    font-size: large;
+}
+
+#report-table{
+    max-height: 400px;
+    overflow: auto;
+}

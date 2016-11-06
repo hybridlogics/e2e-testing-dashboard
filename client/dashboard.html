@@ -1,0 +1,109 @@
+<!--goto button on top-->
+<div class="btn goto-Link" uib-dropdown dropdown-append-to-body>
+    <div uib-dropdown-toggle>
+        Goto <span class="caret"></span>
+    </div>
+
+    <ul class="dropdown-menu url-list" uib-dropdown-menu>
+        <!--<li role="menuitem"><a href="/#/mainDashboard">Main Dashboard</a></li>-->
+        <li role="menuitem"><a href="/#/report">Report</a></li>
+    </ul>
+</div>
+<!--page title-->
+<div class="jumbotron">
+    <h1>
+    <center  style="height:45px;; padding: 2px; margin-left:35px; margin-right:45px;"><small>E2E Test Dashboard</small></center>
+  </h1>
+</div>
+
+<div class="loading" ng-if="loading"><i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i><span class="sr-only">Loading...</span></div>
+<div ng-if="dataError" class="loading">Data not Found</div>
+<div class="col-sm-4 col-lg-4 col-md-4 container" ng-repeat="dashBoardResult in dashBoardResults | orderBy:'appName' ">
+
+    <table class="table table-condensed table-centered table-striped table-bordered dashboardTable" style="font-size: 0.9em;">
+        <div>
+            <caption style="text-align:center;  background-color: green; color:white;border: 1px ; padding: 1px;">
+                <h3>{{dashBoardResult.appName |uppercase}}</h3></caption>
+        </div>
+
+        <tbody>
+            <tr class='jobCol'>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>JobName</strong></td>
+                <td title='{{dashBoardResult.fullDisplayName}}'>{{ dashBoardResult.fullDisplayName | limitTo:30 }} ...</td>
+            </tr>
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>BuildNumber</strong></td>
+                <td> {{ dashBoardResult.id }}</td>
+            </tr>
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>TestStatus</strong></td>
+                <td> {{ dashBoardResult.result }}
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>Date Test Run</strong></td>
+                <td> {{ dashBoardResult.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+            </tr>
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4">
+                    <a href="#/totalTest/{{dashBoardResult.appName}}/{{dashBoardResult.id}}" title="More info" ng-show="dashBoardResult.error==null">
+                        <strong>Total Number of Testcases</strong></a><strong ng-show="dashBoardResult.error!=null">Total Number of
+        Testcases</strong></td>
+                <td>
+                    <div ng-show="dashBoardResult.error==null"> {{dashBoardResult.failCount + dashBoardResult.passCount + dashBoardResult.skipCount }}
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4">
+                    <a href="#/totalSkipped/{{dashBoardResult.appName}}/{{dashBoardResult.id}}" title="More info" ng-show="dashBoardResult.error==null">
+                        <strong>Total Tests Skipped</strong></a><strong ng-show="dashBoardResult.error!=null">Total Tests Skipped</strong>
+                </td>
+                <td>
+                    <div ng-show="dashBoardResult.error==null"> {{dashBoardResult.skipCount}}
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4">
+                    <a href="#/totalPassed/{{dashBoardResult.appName}}/{{dashBoardResult.id}}" title="More info" ng-show="dashBoardResult.error==null">
+                        <strong>Total Tests Passed</strong></a><strong ng-show="dashBoardResult.error!=null">Total Tests Passed</strong>
+                </td>
+                <td>
+                    <div ng-show="dashBoardResult.error==null"> {{dashBoardResult.passCount}}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4">
+                    <a href="#/totalFailed/{{dashBoardResult.appName}}/{{dashBoardResult.id}}" title="More info" ng-show="dashBoardResult.error==null">
+                        <strong>Total Tests Failed</strong></a><strong ng-show="dashBoardResult.error!=null">Total Tests Failed</strong>
+                </td>
+                <td>{{ dashBoardResult.failCount}}</td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>Test Duration</strong></td>
+                <td>
+                    <div ng-show="dashBoardResult.error==null">{{ dashBoardResult.duration | date: 'mm:ss' }} mins
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr class='urlCol'>
+                <td class="col-md-4 col-sm-4 col-lg-4"><strong>URL</strong></td>
+                <td>
+                    <a ng-show="dashBoardResult.url" ng-href="{{ dashBoardResult.url}}">Click Here</a>
+                </td>
+            </tr>
+
+            <div ng-show="dashBoardResult.error!=null" class="water_mark_error">
+                <p id="error_text">{{dashBoardResult.error}}</p>
+            </div>
+
+        </tbody>
+    </table>
+</div>

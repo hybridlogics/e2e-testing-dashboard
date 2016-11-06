@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h1>
+    <center  style="height:45px;; padding: 2px; margin-left:35px; margin-right:45px;"><small>E2E Test Dashboard</small></center>
+  </h1>
+</div>
+
+<div class="loading" ng-if="loading"><i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i><span class="sr-only">Loading...</span></div>
+<div ng-if="dataError" class="loading">Data not Found</div>
+
+<div class="container" ng-if="!loading">
+  <div style='float: right;'>
+    <a href="#/report" style="text-decoration: none"><button style="margin-right:20px" class="btn btn-lg">Back
+    </button></a>
+  </div>
+
+  <table class="table table-condensed table-bordered table-striped" style="font-size: 0.9em; font-weight: bold">
+    <caption><h3>FAILED TESTCASES</h3></caption>
+    <thead style="background: green; color:white">
+    <th>TestCase Title</th>
+    <th> Duration(mins)</th>
+    <th>Error Stacktrace</th>
+    </thead>
+    <tbody>
+
+    <!--iterate data in array in which data status is FAILED-->
+    <tr ng-repeat="failData in failData">
+      <td > {{failData.name}}</td>
+      <td> {{failData.duration/60 | number:2}} min</td>
+      <td> {{failData.errorStackTrace}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

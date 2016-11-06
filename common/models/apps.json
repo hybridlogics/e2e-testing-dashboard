@@ -1,0 +1,23 @@
+{
+  "name": "apps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "testResults": {
+      "type": "object"
+    },
+    "buildInfo": {
+      "type": "object"
+    },
+    "model": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
