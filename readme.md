@@ -51,15 +51,6 @@ OR
 > $ node .
 
 
-Screenshots
------------
-
-![Dadhboard Screenshot](https://raw.githubusercontent.com/hybridlogics/E2E-Testing-Dashboard/master/screenshots/dashboard.png)
-
-![Reports](https://github.com/hybridlogics/E2E-Testing-Dashboard/blob/master/screenshots/report.png?raw=true)
-
-![Test Summary](https://github.com/hybridlogics/E2E-Testing-Dashboard/blob/master/screenshots/testsummary.png?raw=true)
-
 
 
 
