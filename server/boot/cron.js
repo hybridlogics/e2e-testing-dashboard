@@ -17,7 +17,7 @@ module.exports = function (app) {
     var errors = [
         {
             "err_name": 404,
-            "status": "sts failed to run"
+            "status": "Tests failed to run"
   },
         {
             "err_name": 503,
@@ -46,13 +46,13 @@ module.exports = function (app) {
                 "name": "ios",
                 "desc": "application 1",
                 "type": "testResults",
-                "url": "https://dashboardmocks.herokuapp.com/testResults/app2"
+                "url": "https://dashboardmocks.herokuapp.com/testResults/app3"
             },
             "buildInfo": {
                 "name": "ios",
                 "desc": "application 1",
                 "type": "buildInfo",
-                "url": "https://dashboardmocks.herokuapp.com/buildInfo/app2"
+                "url": "https://dashboardmocks.herokuapp.com/buildInfo/app3"
             },
             "versions": "https://dashboardmocks.herokuapp.com/versions"
              },
